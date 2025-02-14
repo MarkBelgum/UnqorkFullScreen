@@ -10,7 +10,9 @@ function fullscreenDWF() {
 
     const modalContentUDesigner = document.querySelector("div.UDView-root.UD_PageGrid_Aside_Content.unq-udview-vertical:not(.-xsmall");
     if (modalContentUDesigner) {
-        modalContentUDesigner.style.minWidth = "100vw";
+        if (modalContentUDesigner.getAttribute("data-selector") != "vwModuleBuilderRight-vwAsideRight-udView") {
+            modalContentUDesigner.style.minWidth = "100vw";
+        }
     }
 
     const dwf = document.querySelector("#diagramDiv");
