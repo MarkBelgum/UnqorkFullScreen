@@ -1,12 +1,17 @@
 function fullscreenDWF() {
     const modalContent = document.querySelector(".ngdialog-content");
-    if (!modalContent) return; // Stop if modal is missing
+    if (modalContent) {
+        modalContent.style.width = "100%";
+        modalContent.style.height = "100%";
+        modalContent.style.marginLeft = 0;
+        modalContent.style.marginRight = 0;
+        modalContent.style.padding = 0;
+    }
 
-    modalContent.style.width = "100%";
-    modalContent.style.height = "100%";
-    modalContent.style.marginLeft = 0;
-    modalContent.style.marginRight = 0;
-    modalContent.style.padding = 0;
+    const modalContentUDesigner = document.querySelector("div.UDView-root.UD_PageGrid_Aside_Content.unq-udview-vertical:not(.-xsmall");
+    if (modalContentUDesigner) {
+        modalContentUDesigner.style.minWidth = "100vw";
+    }
 
     const dwf = document.querySelector("#diagramDiv");
     if (!dwf) return;
