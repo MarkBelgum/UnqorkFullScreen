@@ -12,8 +12,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://auxo.unqork.io/*",
-        "https://intactspecialty-staging.unqork.io/*"
+        "*://*.unqork.io/*"
       ],
       "js": [
         "content.js"
