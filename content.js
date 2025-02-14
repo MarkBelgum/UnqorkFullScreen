@@ -33,6 +33,13 @@ const observer = new MutationObserver(() => {
     if (modal) {
         fullscreenDWF(); // Apply fullscreen when modal appears
     }
+
+    const modalContentUDesigner = document.querySelector("div.UDView-root.UD_PageGrid_Aside_Content.unq-udview-vertical:not(.-xsmall");
+    if (modalContentUDesigner) {
+        if (modalContentUDesigner.getAttribute("data-selector") != "vwModuleBuilderRight-vwAsideRight-udView") {
+            fullscreenDWF(); // Apply fullscreen when modal appears
+        }
+    }
 });
 
 // Start observing the document for added/removed nodes
