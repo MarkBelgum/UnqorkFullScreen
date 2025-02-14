@@ -1,16 +1,24 @@
 {
-  "name": "Hello Extensions",
-  "description": "Base Level Extension",
-  "version": "1.0",
   "manifest_version": 3,
+  "name": "UnqorkFullScreen",
+  "version": "1.0",
+  "description": "makes the dwf bigger",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "content_scripts": [
-      {
+    {
       "matches": [
-        "auxo.unqork.io"
+        "https://auxo.unqork.io/*",
+        "https://intactspecialty-staging.unqork.io/*"
       ],
       "js": [
         "content.js"
-      ]
+      ],
+      "run_at": "document_idle"
     }
   ]
 }
